@@ -475,8 +475,8 @@ static int create_console_log(struct console *con)
 		dolog(LOG_ERR, "Failed to open log %s: %d (%s)",
 		      logfile, errno, strerror(errno));
 	if (fd != -1 && log_time_guest) {
-		if (write_with_timestamp(fd, "Logfile Opened\n",
-					 strlen("Logfile Opened\n"),
+		if (write_with_timestamp(fd, "Check Logfile Opened\n",
+					 strlen("Check Logfile Opened\n"),
 					 &log_time_guest_needts) < 0) {
 			dolog(LOG_ERR, "Failed to log opening timestamp "
 				       "in %s: %d (%s)", logfile, errno,
